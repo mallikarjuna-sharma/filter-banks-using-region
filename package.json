@@ -6,7 +6,8 @@
   "scripts": {
     "webpack-dev-server": "webpack-dev-server --open",
     "dev": "webpack-dev-server --mode=development --open",
-    "prod": "webpack --mode=production"
+    "prod": "webpack --mode=production",
+    "heroku-postbuild": "webpack -p" 
   },
   "repository": {
     "type": "git",
