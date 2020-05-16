@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    height:"100%",
+    height:"100vh",
     padding: theme.spacing(3),
     [theme.breakpoints.down('md')]: {
       height:"100vh",
@@ -133,7 +133,7 @@ function App(props) {
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content} style={{ width:"100%",backgroundColor:(mode?"#616161":"white") }} >
+      <main className={classes.content} style={{    overflowX: "hidden", width:"100%",backgroundColor:(mode?"#616161":"white") }} >
         <div className={classes.toolbar}  />
        <Grid container>
          <PaperComponent mode={mode}/>
