@@ -127,8 +127,6 @@ const useStyles = makeStyles((theme) => ({
 const loaderStyles = makeStyles((theme) => ({
   root: {
     // display: "flex",
-    // paddingLeft:"70%",
-    marginLeft:"75%",
     paddingTop:"5%",
   },
 
@@ -225,11 +223,15 @@ export default function BankTable(props) {
                     })
                 ) : (
                   <TableRow>
-                    <TableCell align="center" >
+                       <TableCell align="right" ></TableCell>
+                       <TableCell align="right" ></TableCell>
+                    <TableCell align="right" >
                       <Grid className={loaderClasses.root}>
                         <CircularProgress />
                       </Grid>
                     </TableCell>
+                    <TableCell align="right" ></TableCell>
+                    <TableCell align="right" ></TableCell>
                   </TableRow>
                 )}
               </TableBody>
