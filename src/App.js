@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
       flexShrink: 0,
     },
   },
+  
+   
+  
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -49,7 +52,11 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
+    height:"100%",
     padding: theme.spacing(3),
+    [theme.breakpoints.down('md')]: {
+      height:"100vh",
+    },
   },
 }));
 
@@ -126,7 +133,7 @@ function App(props) {
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content} style={{ width:"100%",height:"100%",backgroundColor:(mode?"#616161":"white") }} >
+      <main className={classes.content} style={{ width:"100%",backgroundColor:(mode?"#616161":"white") }} >
         <div className={classes.toolbar}  />
        <Grid container>
          <PaperComponent mode={mode}/>
