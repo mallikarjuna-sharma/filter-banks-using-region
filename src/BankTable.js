@@ -41,11 +41,11 @@ function stableSort(array, comparator) {
 }
 
 const headCells = [
-  { id: "bank_name", numeric: false, disablePadding: false, label: "Bank" },
-  { id: "ifsc", numeric: false, disablePadding: false, label: "IFSC" },
-  { id: "branch", numeric: false, disablePadding: false, label: "Branch" },
-  { id: "bank_id", numeric: true, disablePadding: false, label: "Bank ID" },
-  { id: "address", numeric: false, disablePadding: false, label: "Address" },
+  { id: "bank_name", numeric: false, disablePadding: false, label: "Bank" ,width:"20%"},
+  { id: "ifsc", numeric: false, disablePadding: false, label: "IFSC" ,width:"15%"},
+  { id: "branch", numeric: false, disablePadding: false, label: "Branch",width:"20%" },
+  { id: "bank_id", numeric: true, disablePadding: false, label: "Bank ID",width:"15%" },
+  { id: "address", numeric: false, disablePadding: false, label: "Address",width:"30%" },
 ];
 
 function EnhancedTableHead(props) {
@@ -67,6 +67,7 @@ function EnhancedTableHead(props) {
         {headCells.map((headCell,index) => (
           <TableCell
             key={headCell.id}
+            width={headCell.width}
             align={headCell.numeric ? 'right' : (index == 1 || index == 2) ? 'right' : "center"}
             sortDirection={orderBy === headCell.id ? order : false}
           >
