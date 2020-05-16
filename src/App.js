@@ -17,7 +17,7 @@ import PaperComponent from './PaperComponent.js';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
 
-const drawerWidth = 140;
+const drawerWidth = "10%";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,14 +70,16 @@ function App(props) {
     <div>
       <div className={classes.toolbar}  ><Button style={{height:"100%",width:"100%",padding:"10%"}} onClick={e => { const change = mode;setMode(!change) }}>{mode ? <NightsStayIcon/> : <WbSunnyIcon/> }</Button></div>
       <Divider />
-      <List >
+      <Grid item>
+      <List style={{minWidth: "20px"}}>
         {['Inbox'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{ <AccountBalanceIcon />}</ListItemIcon>
+          <ListItem button key={text} style={{minWidth: "20px"}}>
+            <ListItemIcon style={{minWidth: "20px"}}>{ <AccountBalanceIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
+      </Grid >
       <Divider />
       <List>
         
