@@ -135,7 +135,6 @@ const loaderStyles = makeStyles((theme) => ({
 export default function BankTable(props) {
   const { rows ,mode} = props;
 
-  console.log(rows, "rows");
 
   const loaderClasses = loaderStyles();
 
