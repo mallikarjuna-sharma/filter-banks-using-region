@@ -55,9 +55,6 @@ function PaperComponent(props){
 
     useEffect(()=>  {
         
-       console.log(searchString,'searchString')
-       console.log(selectedCity,'selectedCity')
-       console.log(selectedCategory,'selectedCategory')
 
        if(searchString && tableData){
 
@@ -67,7 +64,6 @@ function PaperComponent(props){
             return (values[keys].toString().toUpperCase().indexOf(searchString.toString().toUpperCase()) > -1 )
         })
 
-        console.log(filteredData,'filteredData')
 
         setFilteredData(filteredData)
 

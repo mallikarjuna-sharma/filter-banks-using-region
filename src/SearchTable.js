@@ -75,10 +75,8 @@ export default function CustomizedSelects(props) {
         setloader(true)
         setTypedString(value);
       
-        console.log("start here",value);
         if(searchTimeout) clearTimeout(searchTimeout);
         setSearchTimeout(setTimeout(() => {
-            console.log("start search",value);
             setSearchString(value);
             setloader(false)
         }, 2000));
